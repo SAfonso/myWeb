@@ -33,7 +33,7 @@
 					<li><a onClick="navSection('aboutme')" href="#">About me</a></li>
 					<li><a onClick="navSection('skills')" href="#">Skills</a></li>
 					<li><a onClick="navSection('porfolio')" href="#">Porfolio</a></li>
-					<li><a href="#">Contacto</a></li>
+					<li><a onClick="displayFormContact('block')" href="#" >Contacto</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -51,7 +51,7 @@
 
 	<div id="contact_form">
 		<form action="contact.php" id="form" name="form" method="post">
-			<div id="close_form"></div>
+			<div id="close_form" onClick="displayFormContact('none')"></div>
 			<figure id="logo_mensaje"><img src="iconos/contact.png" alt=""></figure>
 			<p>Di Hola</p>
 			<input type="text" id="name" name="name" placeholder="Tu nombre">
@@ -61,6 +61,7 @@
 			<input type="submit" name="submit" id="button" value="ENVIAR" />
 		</form>
 	</div>
+	<div id="contact_button" onClick="displayFormContact('block')"></div>
 
 
 	<script>
@@ -173,6 +174,10 @@
 
 		}
 
+		function displayFormContact(status){
+			var form = document.getElementById("contact_form");
+			form.style.display = status;
+		}
 
 	</script>
 </body>

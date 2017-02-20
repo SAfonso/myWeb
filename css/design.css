@@ -124,6 +124,29 @@ header #next_section img{
 	width: 100%
 }
 
+#contact_button{
+	width: 60px;
+	border-radius: 50%;
+	color: white;
+	position: fixed;
+	z-index: 80;
+	right: 10px;
+	top: 80vh;
+}
+
+#contact_button:hover{
+	cursor: pointer;
+}
+
+#contact_button:before{
+	font-family: 'icomoon';
+	content: "\ea86";
+	position: relative;
+	font-size: 3.9em;
+	top: -10px;
+	left: -2px;
+}
+
 #contact_form{
 	position: absolute;
 	right: 0px;
@@ -135,6 +158,8 @@ header #next_section img{
 	font-family: 'aller';
 	height: 100vh;
 	z-index: 999;
+	display: none;
+
 }
 
 #contact_form #close_form{
@@ -306,6 +331,14 @@ header #next_section img{
 		top: 0px;
 		right: 0px;
 
+	}
+
+	#contact_form{
+		top: 60px;
+		width: 400px;
+	}
+	#contact_button{
+		right: 30px;
 	}
 }
 @media screen and (min-width: 950px) {
